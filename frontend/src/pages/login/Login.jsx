@@ -2,41 +2,67 @@ import React from "react";
 import "./Login.css";
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
-import { InputText } from 'primereact/inputtext';
-import { Password } from 'primereact/password';
 
+import Input from '@mui/material/Input';
+import TextField from '@mui/material/TextField';
+import IconButton from '@mui/material/IconButton';
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+import FormControl from '@mui/material/FormControl';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
+export default function Login() {
 
-const Login = () => {
+    const [showPassword, setShowPassword] = React.useState(false);
+    const handleClickShowPassword = () => setShowPassword((show) => !show);
+    const handleMouseDownPassword = (event) => {
+        event.preventDefault();
+    };
 
     return (
         <div class="grid justify-content-center mt-8">
-            <Card title="Login" className="md:w-25rem center">
+            <Card title="Login" className="md:w-25rem title-login">
                 <div class="field">
-                    <label for="nome">Nome</label>
-                    <InputText id="nome" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+                    <FormControl fullWidth variant="standard">
+                        <TextField fullWidth id="standard-search" label="E-mail" type="e-mail" variant="standard" />
+                    </FormControl>
                 </div>
                 <div class="field">
-                    <label for="sobrenome">Sobrenome</label>
-                    <InputText id="sobrenome" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+                    <FormControl fullWidth variant="standard">
+                        <InputLabel htmlFor="standard-adornment-password">Senha</InputLabel>
+                        <Input
+                            id="standard-adornment-password"
+                            type={showPassword ? 'text' : 'password'}
+                            endAdornment={
+                                <InputAdornment position="end">
+                                    <IconButton
+                                        aria-label="toggle password visibility"
+                                        onClick={handleClickShowPassword}
+                                        onMouseDown={handleMouseDownPassword}
+                                    >
+                                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                                    </IconButton>
+                                </InputAdornment>
+                            }
+                        />
+                    </FormControl>
                 </div>
-                <div>
-                    <Password feedback={false} tabIndex={1} placeholder="Senha" toggleMask/>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '10vh'}}>
-                    <Button className="btn-login" label="Enviar" severity="secondary" text raised />
+                <div class="mt-3">
+                    <div class="col ">
+                        <Button className="btn-login" label="Enviar" severity="secondary" outlined />
+                    </div>
                 </div>
 
-                <div class="grid">
-                    <div class="col">
+                <div class="grid inline-flex mt-4">
+                    <div>
                         <Button label="Cadastrar" link onClick={() => window.open('', '_blank')} />
                     </div>
-                    <div class="col">
-                        <Button label="Recuperar Senha" link onClick={() => window.open('', '_blank')} />
+                    <div>
+                        <Button label="recuperar senha?" link onClick={() => window.open('', '_blank')} />
                     </div>
                 </div>
             </Card>
         </div>
     );
 }
-export default Login;

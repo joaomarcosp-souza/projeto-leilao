@@ -1,5 +1,8 @@
 .btn-login {
-    width: 300px;
-    min-width: 100px;
-    border-color: #282828;
+    width: 15rem;
+    border-color: blue;
+}
+
+.title-login{
+    text-align: center;
 }
