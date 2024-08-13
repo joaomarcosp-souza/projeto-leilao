@@ -1,8 +1,18 @@
-.btn-login {
-    width: 15rem;
-    border-color: blue;
+.btn-decoration{
+    text-decoration: none;
 }
 
-.title-login{
+.btn-login {
+    color: white;
+    width: 100%;
+    background-color: #3564fb;
+}
+
+.btn-login:hover {
+    color: white;
+    background-color: blue;
+}
+
+.title-login {
     text-align: center;
 }
