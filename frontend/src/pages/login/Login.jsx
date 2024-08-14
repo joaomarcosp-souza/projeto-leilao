@@ -1,11 +1,11 @@
-import React from "react";
 import "./Login.css";
+import React from "react";
+import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
+import { Link } from 'react-router-dom';
 
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
-import Input from '@mui/material/Input';
+import Checkbox from '@mui/material/Checkbox';
+import OutlinedInput from '@mui/material/OutlinedInput';
 import TextField from '@mui/material/TextField';
 import IconButton from '@mui/material/IconButton';
 import InputLabel from '@mui/material/InputLabel';
@@ -18,6 +18,7 @@ import Chip from '@mui/material/Chip';
 
 const Login = () => {
 
+    const [checked, setChecked] = React.useState(false);
 
     const [showPassword, setShowPassword] = React.useState(false);
     const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -27,58 +28,67 @@ const Login = () => {
 
     return (
         <>
-            <h2>Entrar</h2>
-            <div class="field">
-                <FormControl fullWidth variant="standard">
-                    <TextField fullWidth id="standard-search" label="E-mail" type="e-mail" variant="standard" />
-                </FormControl>
-            </div>
-            <div class="field">
-                <FormControl fullWidth variant="standard">
-                    <InputLabel htmlFor="standard-adornment-password">Senha</InputLabel>
-                    <Input
-                        id="standard-adornment-password"
-                        type={showPassword ? 'text' : 'password'}
-                        endAdornment={
-                            <InputAdornment position="end">
-                                <IconButton
-                                    aria-label="toggle password visibility"
-                                    onClick={handleClickShowPassword}
-                                    onMouseDown={handleMouseDownPassword}
-                                >
-                                    {showPassword ? <VisibilityOff /> : <Visibility />}
-                                </IconButton>
-                            </InputAdornment>
-                        }
-                    />
-                </FormControl>
-            </div>
+            <div className="flex align-items-center justify-content-center mt-5">
+                <Card className="shadow-5 border-round md:w-30rem">
+                    <div className="text-center mb-5">
+                        <img src="" alt="logo" height={50} className="mb-3" />
+                        <div className="text-900 text-3xl font-medium mb-3">Entrar</div>
+                        <span className="">para continuar com sua conta Leilão</span>
+                    </div>
+                    <div id="field-name" className="field">
+                        <FormControl fullWidth>
+                            <TextField id="outlined-textarea" label="E-mail | Usuário" placeholder="Endereço de e-mail ou nome de usuário" />
+                        </FormControl>
+                    </div>
+                    <div id="field-password" className="field">
+                        <FormControl fullWidth>
+                            <InputLabel htmlFor="outlined-adornment-password" >Senha</InputLabel>
+                            <OutlinedInput
+                                id="outlined-adornment-password"
+                                placeholder="Senha deve ter no mínimo 6 caracteres"
+                                type={showPassword ? 'text' : 'password'}
+                                endAdornment={
+                                    <InputAdornment position="end">
+                                        <IconButton
+                                            aria-label="toggle password visibility"
+                                            onClick={handleClickShowPassword}
+                                            onMouseDown={handleMouseDownPassword}
+                                            edge="end"
+                                        >
+                                            {showPassword ? <VisibilityOff /> : <Visibility />}
+                                        </IconButton>
+                                    </InputAdornment>
+                                }
+                                label="Senha"
+                            />
+                        </FormControl>
+                    </div>
 
+                    <div className="flex align-items-center justify-content-between mb-6">
+                        <div className="flex align-items-center">
+                            <Checkbox id="rememberme" onChange={e => setChecked(e.checked)} checked={checked} className="mr-2" />
+                            <label htmlFor="rememberme">Lembrar de min</label>
+                        </div>
+                        <Link className="font-medium ml-2 no-underline text-blue-500 text-right cursor-pointer" to="/recover" target="_blank">Esqueceu a senha?</Link>
+                    </div>
 
-            <div class="grid inline-flex">
-                <div class="inline-flex">
-                    <FormGroup>
-                        <FormControlLabel control={<Switch defaultChecked />} label="Lembrar-se?" />
-                    </FormGroup>
-                    <Button label="recuperar senha?" link onClick={() => window.open('/recover', '_blank')} />
-                </div>
-            </div>
+                    <div className="mt-5 mb-5">
+                        <div className="col">
+                            <Button className="w-full btn-login" label="Continuar" icon="pi pi-user" iconPos="left" severity="secondary" outlined />
+                        </div>
+                    </div>
 
-            <div class="mt-3 mb-5">
-                <div class="col">
-                    <Button className="btn-login" label="Conectar" severity="secondary" outlined />
-                </div>
-            </div>
+                    <Divider>
+                        <Chip label="Ou" size="small" />
+                    </Divider>
 
-            <Divider>
-                <Chip label="Ou" size="small" />
-            </Divider>
-
-            <div class="grid inline-flex  mt-4 btn-decoration">
-                <div class="inline-flex">
-                    <p>Não possui uma conta? </p>
-                    <Button label="Criar" link onClick={() => window.open('/register', '_blank')} />
-                </div>
+                    <div className="text-center mt-4">
+                        <span className="text-600 font-medium line-height-3">Não tem uma conta?
+                            <Link className="font-medium ml-2 no-underline text-blue-500 text-right" to="/registration" target="_blank">Cadastre-se</Link>
+                        </span>
+                        <Button className="w-full p-button-raised p-button-warning mt-5" label="Entrar com Google" icon="pi pi-google" iconPos="left" />
+                    </div>
+                </Card>
             </div>
         </>
     );

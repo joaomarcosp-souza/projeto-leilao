@@ -1,6 +1,14 @@
 .header{
-    border: 1px solid #aaa9a9;
-    border-radius: 5px;
+    display: flex;
     padding: 10px;
     background-color: #dfdfdf;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header>p>a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    margin-right: 10px;
 }
