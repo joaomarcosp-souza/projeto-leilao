@@ -5,17 +5,19 @@ import Login from './pages/login/Login';
 import Recover from './pages/recover-password/Recover';
 import DefaultLayout from './components/DefaultLayout';
 import Register from './pages/register/Register';
-import SimpleLayout from './components/SimpleLayout';
+import Change from './pages/change-password/Change';
+import LoginLayout from './components/LoginLayout';
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<DefaultLayout><Home/></DefaultLayout>}/>
-          <Route path='/login' element={<SimpleLayout><Login /></SimpleLayout>}/>
-          <Route path='/recover' element={<SimpleLayout><Recover /></SimpleLayout>}/>
-          <Route path='/registration' element={<SimpleLayout><Register /></SimpleLayout>} />
+          <Route path='/' element={<DefaultLayout><Home /></DefaultLayout>} />
+          <Route path='/login' element={<LoginLayout><Login /></LoginLayout>} />
+          <Route path='/registration' element={<LoginLayout><Register /></LoginLayout>} />
+          <Route path='/recover-password' element={<LoginLayout><Recover /></LoginLayout>} />
+          <Route path='/change-password' element={<LoginLayout><Change /></LoginLayout>} />
         </Routes>
       </BrowserRouter>
     </>
