@@ -1,8 +1,8 @@
 import "./Login.css";
-import React from "react";
+import React, { useState } from "react";
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Checkbox from '@mui/material/Checkbox';
 import OutlinedInput from '@mui/material/OutlinedInput';
@@ -19,12 +19,32 @@ import Chip from '@mui/material/Chip';
 const Login = () => {
 
     const [checked, setChecked] = React.useState(false);
+    const navigate = useNavigate();
 
     const [showPassword, setShowPassword] = React.useState(false);
     const handleClickShowPassword = () => setShowPassword((show) => !show);
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
     };
+
+    const [user, setUser] = useState({ email: "", password: "" });
+
+    const handleChange = (input) => {
+        setUser({ ...user, [input.target.name]: input.target.value })
+    }
+
+    const login = () => {
+
+        if (user.email == "teste@gmail.com" && user.password == "123456") {
+            let token = "token do backend"
+            localStorage.setItem("token", token);
+            localStorage.setItem("email", user.email);
+            navigate("/");
+        }else{
+           alert('usuário ou senha incorretos');
+        }
+
+    }
 
     return (
         <Card className="shadow-5 border-round md:w-30rem">
@@ -35,7 +55,7 @@ const Login = () => {
             </div>
             <div id="field-name" className="field">
                 <FormControl fullWidth>
-                    <TextField id="outlined-textarea" label="E-mail | Usuário" placeholder="Endereço de e-mail ou nome de usuário" required />
+                    <TextField onChange={handleChange} id="outlined-textarea" name="email" label="E-mail | Usuário" placeholder="Endereço de e-mail ou nome de usuário" required />
                 </FormControl>
             </div>
             <div id="field-password" className="field">
@@ -45,6 +65,8 @@ const Login = () => {
                         id="outlined-adornment-password"
                         placeholder="Senha deve ter no mínimo 6 caracteres"
                         type={showPassword ? 'text' : 'password'}
+                        name="password"
+                        onChange={handleChange}
                         endAdornment={
                             <InputAdornment position="end">
                                 <IconButton
@@ -72,7 +94,7 @@ const Login = () => {
 
             <div className="mt-5 mb-5">
                 <div className="col">
-                    <Button className="w-full btn-login" label="Continuar" icon="pi pi-user" iconPos="left" severity="secondary" outlined />
+                    <Button onClick={login} className="w-full btn-login" label="Continuar" icon="pi pi-user" iconPos="left" severity="secondary" outlined />
                 </div>
             </div>
 

@@ -7,17 +7,20 @@ import DefaultLayout from './components/DefaultLayout';
 import Register from './pages/register/Register';
 import Change from './pages/change-password/Change';
 import LoginLayout from './components/LoginLayout';
+import PrivateRouter from './components/PrivateRouter';
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<DefaultLayout><Home /></DefaultLayout>} />
+          <Route element={<PrivateRouter />}>
+            <Route path='/' element={<DefaultLayout><Home /></DefaultLayout>} />
+            <Route path='/change-password' element={<LoginLayout><Change /></LoginLayout>} />
+          </Route>
           <Route path='/login' element={<LoginLayout><Login /></LoginLayout>} />
           <Route path='/registration' element={<LoginLayout><Register /></LoginLayout>} />
           <Route path='/recover-password' element={<LoginLayout><Recover /></LoginLayout>} />
-          <Route path='/change-password' element={<LoginLayout><Change /></LoginLayout>} />
         </Routes>
       </BrowserRouter>
     </>

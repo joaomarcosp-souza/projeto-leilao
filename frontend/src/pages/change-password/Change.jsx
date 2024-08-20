@@ -168,7 +168,7 @@ const Change = () => {
                     <div className="mr-2">
                         <Button className="w-full btn-login" icon="pi pi-envelope" iconPos="left" label="Alterar senha" />
                     </div>
-                    <Button icon="pi pi-times" severity="secondary" onClick={() => window.location.href = '/login'} tooltip="Cancelar" tooltipOptions={{ position: 'right' }} />
+                    <Button icon="pi pi-times" severity="secondary" onClick={() => window.location.href = '/'} tooltip="Cancelar" tooltipOptions={{ position: 'right' }} />
                 </div>
             </Card>
         </div>
