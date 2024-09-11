@@ -26,7 +26,7 @@ const Recover = () => {
             </div>
             <div className="field">
                 <FormControl fullWidth variant="standard">
-                    <TextField id="outlined-textarea" label="E-mail | Usuário"
+                    <TextField id="outlined-textarea" label="E-mail"
                         placeholder="Endereço de e-mail ou nome de usuário" multiline
                         value={inputValue} onChange={handleInputChange} required
                     />

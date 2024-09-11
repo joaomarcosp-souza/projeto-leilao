@@ -28,22 +28,19 @@ const Login = () => {
     };
 
     const [user, setUser] = useState({ email: "", password: "" });
-
     const handleChange = (input) => {
         setUser({ ...user, [input.target.name]: input.target.value })
     }
 
     const login = () => {
-
         if (user.email == "teste@gmail.com" && user.password == "123456") {
             let token = "token do backend"
             localStorage.setItem("token", token);
             localStorage.setItem("email", user.email);
             navigate("/");
         }else{
-           alert('usuário ou senha incorretos');
+           alert('email ou senha incorretos');
         }
-
     }
 
     return (
@@ -55,10 +52,11 @@ const Login = () => {
             </div>
             <div id="field-name" className="field">
                 <FormControl fullWidth>
-                    <TextField onChange={handleChange} id="outlined-textarea" name="email" label="E-mail | Usuário" placeholder="Endereço de e-mail ou nome de usuário" required />
+                    <TextField onChange={handleChange} id="outlined-textarea" name="email" label="E-mail" placeholder="Endereço de e-mail" required />
                 </FormControl>
             </div>
-            <div id="field-password" className="field">
+
+            <div id="field-password" className="field card flex justify-content-center">
                 <FormControl required fullWidth>
                     <InputLabel htmlFor="outlined-adornment-password" >Senha</InputLabel>
                     <OutlinedInput

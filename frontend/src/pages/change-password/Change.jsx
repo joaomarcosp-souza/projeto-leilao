@@ -5,7 +5,6 @@ import { useState } from 'react';
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 
-
 import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
@@ -56,7 +55,6 @@ const Change = () => {
         return '';
     };
 
-
     const handlePasswordChange = (event) => {
         // Pega a nova senha
         const newPassword = event.target.value;
@@ -102,15 +100,10 @@ const Change = () => {
                             label="Código"
                             placeholder="O código deve possuir 4 chacteres"
                             required
-                        // InputLabelProps={{
-                        //     classes: {
-                        //         asterisk: 'custom-required'
-                        //     }
-                        // }}
                         />
                     </FormControl>
                 </div>
-                <div id="field-password" className="field">
+                <div id="field-password" className="field card flex justify-content-center">
                     <FormControl required fullWidth error={!!passwordError}>
                         <InputLabel htmlFor="outlined-adornment-password">Nova Senha</InputLabel>
                         <OutlinedInput

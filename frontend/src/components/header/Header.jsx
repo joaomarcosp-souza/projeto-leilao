@@ -19,8 +19,8 @@ const pages = ['primeiro', 'Segundo', 'Terceiro'];
 
 
 const settings = [
-    { name: 'Profile', path: '/profile' },
-    { name: 'trocar senha', path: '/change-password' },
+    { name: 'Profile', path: '/perfil' },
+    { name: 'change password', path: '/change-password' },
     { name: 'Logout', component: <Logout /> },
 ];
 
@@ -52,7 +52,7 @@ const Header = () => {
                         variant="h6"
                         noWrap
                         component="a"
-                        href="#app-bar-with-responsive-menu"
+                        href="#"
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
@@ -102,7 +102,6 @@ const Header = () => {
                             ))}
                         </Menu>
                     </Box>
-                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
                     <Typography
                         variant="h5"
                         noWrap
@@ -119,7 +118,7 @@ const Header = () => {
                             textDecoration: 'none',
                         }}
                     >
-                        LOGO
+                        Nome site
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (

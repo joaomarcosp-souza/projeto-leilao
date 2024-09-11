@@ -8,6 +8,7 @@ import Register from './pages/register/Register';
 import Change from './pages/change-password/Change';
 import LoginLayout from './components/LoginLayout';
 import PrivateRouter from './components/PrivateRouter';
+import Profile from './pages/profile/Profile';
 
 function App() {
   return (
@@ -16,10 +17,11 @@ function App() {
         <Routes>
           <Route element={<PrivateRouter />}>
             <Route path='/' element={<DefaultLayout><Home /></DefaultLayout>} />
-            <Route path='/change-password' element={<LoginLayout><Change /></LoginLayout>} />
+            <Route path='/perfil' element={<DefaultLayout><Profile /></DefaultLayout>} />
           </Route>
           <Route path='/login' element={<LoginLayout><Login /></LoginLayout>} />
           <Route path='/registration' element={<LoginLayout><Register /></LoginLayout>} />
+          <Route path='/change-password' element={<LoginLayout><Change /></LoginLayout>} />
           <Route path='/recover-password' element={<LoginLayout><Recover /></LoginLayout>} />
         </Routes>
       </BrowserRouter>
