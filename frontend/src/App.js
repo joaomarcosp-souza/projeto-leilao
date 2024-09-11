@@ -3,12 +3,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import Recover from './pages/recover-password/Recover';
-import DefaultLayout from './components/DefaultLayout';
 import Register from './pages/register/Register';
 import Change from './pages/change-password/Change';
-import LoginLayout from './components/LoginLayout';
-import PrivateRouter from './components/PrivateRouter';
+import PrivateRouter from './components/layouts/PrivateRouter';
 import Profile from './pages/profile/Profile';
+import LoginLayout from './components/layouts/Login/LoginLayout';
+import DefaultLayout from './components/layouts/DefaultLayout';
 
 function App() {
   return (
