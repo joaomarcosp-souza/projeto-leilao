@@ -1,0 +1,12 @@
+.buttonCancel{
+    background-color: #c8c8c8;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 16px;
+}

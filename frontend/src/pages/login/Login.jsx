@@ -1,6 +1,5 @@
 import "./Login.css";
 import React, { useState } from "react";
-import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -15,10 +14,11 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Divider from '@mui/material/Divider';
 import Chip from '@mui/material/Chip';
+import { ROUTES } from "../../routes";
 
 const Login = () => {
 
-    const [checked, setChecked] = React.useState(false);
+    const [checked, setChecked] = React.useState();
     const navigate = useNavigate();
 
     const [showPassword, setShowPassword] = React.useState(false);
@@ -33,18 +33,18 @@ const Login = () => {
     }
 
     const login = () => {
-        if (user.email == "teste@gmail.com" && user.password == "123456") {
+        if (user.email === "teste@gmail.com" && user.password === "123456") {
             let token = "token do backend"
             localStorage.setItem("token", token);
             localStorage.setItem("email", user.email);
-            navigate("/");
-        }else{
-           alert('email ou senha incorretos');
+            navigate(ROUTES.DASHBOARD);
+        } else {
+            alert('email ou senha incorretos');
         }
     }
 
     return (
-        <Card className="shadow-5 border-round md:w-30rem">
+        <>
             <div className="text-center mb-5">
                 <img src="" alt="logo" height={50} className="mb-3" />
                 <div className="text-900 text-3xl font-medium mb-3">Entrar</div>
@@ -87,7 +87,9 @@ const Login = () => {
                     <Checkbox id="rememberme" onChange={e => setChecked(e.checked)} checked={checked} className="mr-2" />
                     <label htmlFor="rememberme">Lembrar de min</label>
                 </div>
-                <Link className="font-medium ml-2 no-underline text-blue-500 text-right cursor-pointer" to="/recover-password" target="_blank">Esqueceu a senha?</Link>
+                <Link
+                    className="font-medium ml-2 no-underline text-blue-500 text-right cursor-pointer"
+                    to="/recover-password">Esqueceu a senha?</Link>
             </div>
 
             <div className="mt-5 mb-5">
@@ -102,11 +104,13 @@ const Login = () => {
 
             <div className="text-center mt-4">
                 <span className="text-600 font-medium line-height-3">Não tem uma conta?
-                    <Link className="font-medium ml-2 no-underline text-blue-500 text-right" to="/registration" target="_blank">Cadastre-se</Link>
+                    <Link
+                        className="font-medium ml-2 no-underline text-blue-500 text-right"
+                        to="/register">Cadastre-se</Link>
                 </span>
                 <Button className="w-full p-button-raised p-button-warning mt-5" label="Entrar com Google" icon="pi pi-google" iconPos="left" />
             </div>
-        </Card>
+        </>
     );
 }
 
