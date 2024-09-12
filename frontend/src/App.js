@@ -1,5 +1,6 @@
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import Recover from './pages/recover-password/Recover';
@@ -11,11 +12,21 @@ import LoginLayout from './components/layouts/Login/LoginLayout';
 import DefaultLayout from './components/layouts/DefaultLayout';
 import { ROUTES } from './routes';
 
+function RedirectToLogin() {
+  let navigate = useNavigate();
+  React.useEffect(() => {
+    navigate('/login');
+  }, [navigate]);
+
+  return null;
+}
+
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<RedirectToLogin />} />
           <Route element={<PrivateRouter />}>
             <Route path={ROUTES.DASHBOARD} element={<DefaultLayout><Home /></DefaultLayout>} />
             <Route path={ROUTES.PERFIL} element={<DefaultLayout><Profile /></DefaultLayout>} />
