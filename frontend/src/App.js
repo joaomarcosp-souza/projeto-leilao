@@ -9,6 +9,7 @@ import PrivateRouter from './components/layouts/PrivateRouter';
 import Profile from './pages/profile/Profile';
 import LoginLayout from './components/layouts/Login/LoginLayout';
 import DefaultLayout from './components/layouts/DefaultLayout';
+import { ROUTES } from './routes';
 
 function App() {
   return (
@@ -16,13 +17,13 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<PrivateRouter />}>
-            <Route path='/' element={<DefaultLayout><Home /></DefaultLayout>} />
-            <Route path='/perfil' element={<DefaultLayout><Profile /></DefaultLayout>} />
+            <Route path={ROUTES.DASHBOARD} element={<DefaultLayout><Home /></DefaultLayout>} />
+            <Route path={ROUTES.PERFIL} element={<DefaultLayout><Profile /></DefaultLayout>} />
           </Route>
-          <Route path='/login' element={<LoginLayout><Login /></LoginLayout>} />
-          <Route path='/registration' element={<LoginLayout><Register /></LoginLayout>} />
-          <Route path='/change-password' element={<LoginLayout><Change /></LoginLayout>} />
-          <Route path='/recover-password' element={<LoginLayout><Recover /></LoginLayout>} />
+          <Route path={ROUTES.LOGIN} element={<LoginLayout><Login /></LoginLayout>} />
+          <Route path={ROUTES.REGISTER} element={<LoginLayout><Register /></LoginLayout>} />
+          <Route path={ROUTES.CHANGE_PASSWORD} element={<LoginLayout><Change /></LoginLayout>} />
+          <Route path={ROUTES.RECOVER_PASSWORD} element={<LoginLayout><Recover /></LoginLayout>} />
         </Routes>
       </BrowserRouter>
     </>

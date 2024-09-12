@@ -9,7 +9,6 @@ const Home = () => {
         <>
         <Box>
             <div className="p-8">
-
             </div>
         </Box>
         </>

@@ -1,14 +1,14 @@
 import './Change.css';
 import { React } from "react";
-import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 import TextField from '@mui/material/TextField';
 import FormControl from '@mui/material/FormControl';
-import Password from './Inputs/Password';
+import Password from '../../components/Inputs/Password/Password'
+import CancelButton from '../../components/Inputs/buttons/cancelButton/CancelButton';
 
 const Change = () => {
     return (
-        <Card className="shadow-5 border-round md:w-30rem">
+        <>
             <div className="text-center mb-5">
                 <img src="" alt="logo" height={50} className="mb-3" />
                 <div className="text-900 text-3xl font-medium mb-3">Alterar Senha</div>
@@ -16,8 +16,11 @@ const Change = () => {
             </div>
             <div id="field-mail" className="field">
                 <FormControl fullWidth>
-                    <TextField id="outlined-textarea" label="emailTeste@gmail.com" placeholder="Endereço de e-mail" disabled />
-                    <text className="text-500 text-sm ml-2 mt-1">E-mail não pode ser alterado</text>
+                    <TextField
+                        id="outlined-textarea"
+                        label="emailTeste@gmail.com"
+                        placeholder="Endereço de e-mail" disabled
+                        helperText="E-mail não pode ser alterado" required />
                 </FormControl>
             </div>
             <div id="field-code" className="field">
@@ -37,9 +40,9 @@ const Change = () => {
                 <div className="mr-2">
                     <Button className="w-full btn-login" icon="pi pi-envelope" iconPos="left" label="Alterar senha" />
                 </div>
-                <Button icon="pi pi-times" severity="secondary" onClick={() => window.location.href = '/'} tooltip="Cancelar" tooltipOptions={{ position: 'right' }} />
+                <CancelButton />
             </div>
-        </Card>
+        </>
     );
 }
 

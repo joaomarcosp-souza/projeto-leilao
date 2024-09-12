@@ -1,3 +1,4 @@
+import './Password.css';
 import { React } from "react";
 import { useState } from 'react';
 import FormControl from '@mui/material/FormControl';
@@ -7,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
-import './Password.css'; // Adicione um arquivo CSS
+import { FormHelperText } from "@mui/material";
 
 const Password = () => {
     const [password, setPassword] = useState('');
@@ -16,7 +17,7 @@ const Password = () => {
     const [repeatPassword, setRepeatPassword] = useState('');
     const [validationErrors, setValidationErrors] = useState({});
     const [repeatPasswordError, setRepeatPasswordError] = useState('');
-    const [isPasswordFocused, setIsPasswordFocused] = useState(false);  // Estado para saber se o campo está focado
+    const [isPasswordFocused, setIsPasswordFocused] = useState(false);
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
     const handleClickShowRepeatPassword = () => setShowRepeatPassword((show) => !show);
@@ -58,7 +59,6 @@ const Password = () => {
 
     const getErrorStyle = (condition) => ({
         color: condition ? 'green' : 'red',
-        fontSize: 13,
     });
 
     return (
@@ -69,12 +69,12 @@ const Password = () => {
                     <InputLabel htmlFor="outlined-adornment-password">Nova Senha</InputLabel>
                     <OutlinedInput
                         id="outlined-adornment-password"
-                        placeholder="Senha deve ter no mínimo 6 caracteres"
+                        placeholder="Informe uma senha forte."
                         type={showPassword ? 'text' : 'password'}
                         value={password}
                         onChange={handlePasswordChange}
-                        onFocus={() => setIsPasswordFocused(true)}  // Mostra critérios quando focado
-                        onBlur={() => setIsPasswordFocused(false)}   // Esconde critérios quando perde o foco
+                        onFocus={() => setIsPasswordFocused(true)}
+                        onBlur={() => setIsPasswordFocused(false)}
                         endAdornment={
                             <InputAdornment position="end">
                                 <IconButton
@@ -91,7 +91,7 @@ const Password = () => {
                     />
                 </FormControl>
             </div>
-            
+
             {isPasswordFocused && (
                 <div className="criteria-box">
                     <p style={getErrorStyle(validationErrors.length)}>
@@ -113,7 +113,7 @@ const Password = () => {
             )}
 
             <div id="field-repeat-password" className="field">
-                <FormControl required fullWidth>
+                <FormControl required fullWidth >
                     <InputLabel htmlFor="outlined-adornment-repeat-password">Confirmar a Senha</InputLabel>
                     <OutlinedInput
                         id="outlined-adornment-repeat-password"
@@ -135,7 +135,8 @@ const Password = () => {
                         }
                         label="Confirmar a Senha"
                     />
-                    {repeatPasswordError && <p style={{ color: 'red', fontSize: 13 }}>{repeatPasswordError}</p>}
+                    {repeatPasswordError && <p className='repeatPasswordError'>{repeatPasswordError}</p>}
+                    <FormHelperText>{'Por favor, repita sua senha.'}</FormHelperText>
                 </FormControl>
             </div>
         </div>
