@@ -15,7 +15,7 @@ const Change = () => {
                 <div className="text-900 text-3xl font-medium mb-3">Alterar Senha</div>
                 <span className="subTitle">para voltar a acessar sua conta.</span>
             </div>
-            <div id="field-email" aria-label='campo de email' className='mb-3'>
+            <div id="field-email" aria-label='campo de email' className="fields">
                 <FormControl fullWidth>
                     <TextField
                         id="outlined-textarea"
@@ -29,7 +29,7 @@ const Change = () => {
                 <Password />
             </div>
 
-            <div id="field-code" aria-label='campo de código'>
+            <div id="field-code" aria-label='campo de código' className="mt-3">
                 <OTPInput />
             </div>
             <div className="flex align-items-center justify-content-center mt-3">

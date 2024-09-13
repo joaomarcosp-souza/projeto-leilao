@@ -64,7 +64,7 @@ const Password = () => {
     return (
         <div className="password-container">
             {/* Campo de Senha */}
-            <div id="field-password" className="card flex justify-content-center">
+            <div id="field-password" className="card flex justify-content-center mt-3">
                 <FormControl required fullWidth>
                     <InputLabel htmlFor="outlined-adornment-password">Nova Senha</InputLabel>
                     <OutlinedInput
@@ -112,7 +112,7 @@ const Password = () => {
                 </div>
             )}
 
-            <div id="field-repeat-password" className="mt-3 mb-3">
+            <div id="field-repeat-password" className="mt-3">
                 <FormControl required fullWidth >
                     <InputLabel htmlFor="outlined-adornment-repeat-password">Confirmar a Senha</InputLabel>
                     <OutlinedInput

@@ -92,7 +92,7 @@ const Login = () => {
                     to="/recover-password">Esqueceu a senha?</Link>
             </div>
 
-            <div className="mt-3 mb-3">
+            <div className="mb-3">
                 <div className="col">
                     <Button onClick={login} className="w-full btn-login" label="Continuar" icon="pi pi-user" iconPos="left" severity="secondary" outlined />
                 </div>
@@ -108,7 +108,7 @@ const Login = () => {
                         className="font-medium ml-2 no-underline text-blue-500 text-right"
                         to="/register">Cadastre-se</Link>
                 </span>
-                <Button className="w-full p-button-raised p-button-warning mt-5" label="Entrar com Google" icon="pi pi-google" iconPos="left" />
+                <Button className="w-full p-button-raised p-button-warning mt-3" label="Entrar com Google" icon="pi pi-google" iconPos="left" />
             </div>
         </>
     );
