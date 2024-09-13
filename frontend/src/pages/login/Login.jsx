@@ -35,8 +35,8 @@ const Login = () => {
     const login = () => {
         if (user.email === "teste@gmail.com" && user.password === "123456") {
             let token = "token do backend"
-            localStorage.setItem("token", token);
             localStorage.setItem("email", user.email);
+            localStorage.setItem("token", token);
             navigate(ROUTES.DASHBOARD);
         } else {
             alert('email ou senha incorretos');
@@ -50,13 +50,13 @@ const Login = () => {
                 <div className="text-900 text-3xl font-medium mb-3">Entrar</div>
                 <span className="">para continuar com sua conta Leilão</span>
             </div>
-            <div id="field-name" className="field">
+            <div id="field-email" className="mb-3">
                 <FormControl fullWidth>
                     <TextField onChange={handleChange} id="outlined-textarea" name="email" label="E-mail" placeholder="Endereço de e-mail" required />
                 </FormControl>
             </div>
 
-            <div id="field-password" className="field card flex justify-content-center">
+            <div id="field-password" className="card flex justify-content-center mb-1">
                 <FormControl required fullWidth>
                     <InputLabel htmlFor="outlined-adornment-password" >Senha</InputLabel>
                     <OutlinedInput
@@ -82,9 +82,9 @@ const Login = () => {
                 </FormControl>
             </div>
 
-            <div className="flex align-items-center justify-content-between mb-6">
+            <div className="flex align-items-center justify-content-between mb-5">
                 <div className="flex align-items-center">
-                    <Checkbox id="rememberme" onChange={e => setChecked(e.checked)} checked={checked} className="mr-2" />
+                    <Checkbox id="rememberme" onChange={e => setChecked(e.checked)} checked={checked} className="mr-1" />
                     <label htmlFor="rememberme">Lembrar de min</label>
                 </div>
                 <Link
@@ -92,7 +92,7 @@ const Login = () => {
                     to="/recover-password">Esqueceu a senha?</Link>
             </div>
 
-            <div className="mt-5 mb-5">
+            <div className="mt-3 mb-3">
                 <div className="col">
                     <Button onClick={login} className="w-full btn-login" label="Continuar" icon="pi pi-user" iconPos="left" severity="secondary" outlined />
                 </div>
@@ -102,7 +102,7 @@ const Login = () => {
                 <Chip label="Ou" size="small" />
             </Divider>
 
-            <div className="text-center mt-4">
+            <div className="text-center mt-3">
                 <span className="text-600 font-medium line-height-3">Não tem uma conta?
                     <Link
                         className="font-medium ml-2 no-underline text-blue-500 text-right"

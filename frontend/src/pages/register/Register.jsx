@@ -22,21 +22,22 @@ const Register = () => {
                 <div className="text-900 text-3xl font-medium mb-3">Cadastra-se</div>
                 <span className="subTitle">para acessar todo site.</span>
             </div>
-            <div fullWidth id="field-name" className="field gap-2 inline-flex">
-                <FormControl>
+            <div id="field-name" className="gap-2 inline-flex">
+                <FormControl fullWidth>
                     <TextField id="outlined-textarea" label="Nome" placeholder="Primeiro nome" required />
                 </FormControl>
-                <FormControl>
+                <FormControl fullWidth>
                     <TextField id="outlined-textarea" label="Sobrenome" placeholder="Segundo nome" required />
                 </FormControl>
             </div>
-            <div id="field-mail" className="field">
+            
+            <div id="field-email" className="mt-3">
                 <FormControl fullWidth>
                     <TextField value={inputValue} onChange={handleInputChange} id="outlined-textarea" label="E-mail" placeholder="Endereço de e-mail" required />
                 </FormControl>
             </div>
 
-            <div className="flex align-items-center justify-content-center mt-5">
+            <div className="flex align-items-center justify-content-center mt-3">
                 <div className="mr-2">
                     <Button className="w-full btn-login" icon="pi pi-envelope" iconPos="left" label="Cadastrar" disabled={isButtonDisabled} />
                 </div>

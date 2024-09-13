@@ -1,17 +1,15 @@
-import React from "react";
 import './LoginLayout.css';
+import React from "react";
 import { Card } from "primereact/card";
 
 const LoginLayout = ({ children }) => {
 
     return (
-
-        <div className="flex align-content-center justify-content-center center">
-            <Card id="Card" className="shadow-5 border-round lg:w-30rem sm:w-25rem">
+        <div className="card_container">
+            <Card id="Card" className="lg:w-30rem sm:w-25rem">
                 {children}
             </Card>
         </div>
-
     )
 }
 

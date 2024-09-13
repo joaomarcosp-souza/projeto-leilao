@@ -24,15 +24,15 @@ const Recover = () => {
                 <div className="text-900 text-3xl font-medium mb-3">Recuperar Senha</div>
                 <span className="subTitle">Um e-mail de recuperação sera enviado para você</span>
             </div>
-            <div className="field">
-                <FormControl fullWidth variant="standard">
+            <div id="field-email">
+                <FormControl fullWidth>
                     <TextField id="outlined-textarea" label="E-mail"
                         placeholder="Endereço de e-mail cadastrado no sistema" multiline
                         value={inputValue} onChange={handleInputChange} required
                     />
                 </FormControl>
             </div>
-            <div className="flex align-items-center justify-content-center mt-5">
+            <div className="flex align-items-center justify-content-center mt-3">
                 <div className="mr-2">
                     <Button className="w-full btn-login" icon="pi pi-envelope" iconPos="left" label="Enviar e-mail" disabled={isButtonDisabled} />
                 </div>
