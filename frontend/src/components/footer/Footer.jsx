@@ -1,12 +1,15 @@
 import React from "react";
 import "./Footer.css";
 
-const Footer = () =>{
+const Footer = () => {
 
-    return(
-        <div className="footer mt-6">
-            <p className="text-center">&copy;Todos direitos reservados</p>
+    return (
+        <div>
+            <footer className="footer">
+                <p className="text-center">&copy;Todos direitos reservados</p>
+            </footer>
         </div>
+
     );
 
 }
