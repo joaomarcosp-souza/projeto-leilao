@@ -11,6 +11,7 @@ import Profile from './pages/profile/Profile';
 import LoginLayout from './components/layouts/Login/LoginLayout';
 import DefaultLayout from './components/layouts/DefaultLayout';
 import { ROUTES } from './routes';
+import EditProfile from './pages/profile/ProfileContent/Edit-Profile';
 
 function RedirectToLogin() {
   let navigate = useNavigate();
@@ -29,7 +30,8 @@ function App() {
           <Route path="/" element={<RedirectToLogin />} />
           <Route element={<PrivateRouter />}>
             <Route path={ROUTES.DASHBOARD} element={<DefaultLayout><Home /></DefaultLayout>} />
-            <Route path={ROUTES.PERFIL} element={<DefaultLayout><Profile /></DefaultLayout>} />
+            <Route path={ROUTES.PROFILE} element={<DefaultLayout><Profile /></DefaultLayout>} />
+            <Route path={ROUTES.EDIT_PROFILE} element={<DefaultLayout><EditProfile /></DefaultLayout>} />
           </Route>
           <Route path={ROUTES.LOGIN} element={<LoginLayout><Login /></LoginLayout>} />
           <Route path={ROUTES.REGISTER} element={<LoginLayout><Register /></LoginLayout>} />
