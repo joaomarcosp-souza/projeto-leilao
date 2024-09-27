@@ -1,0 +1,74 @@
+{
+    "auction": {
+        "auctions-active": "Active Auctions",
+        "last-items-sold": "Last Items Sold",
+        "new-users": "New Users",
+        "total-sales": "Total Sales",
+        "view-details": "View Details"
+    },
+    "label-img": {
+        "logo": "Image of the Auction logo"
+    },
+    "login": {
+        "title": "Login",
+        "subtitle": "to continue with your Auction account",
+        "email": "E-mail",
+        "password": "Password",
+        "remember-me": "Remember me",
+        "forgot-password": "Forgot password?",
+        "or": "Or",
+        "change-password": "Change password",
+        "no-account": "Don't have an account?",
+        "register": "Register"
+    },
+    "register": {
+        "title": "Register",
+        "subtitle": "to access our modules"
+    },
+    "button": {
+        "send-email": "Send e-mail",
+        "cancel": "Cancel",
+        "save": "Save",
+        "delete": "Delete",
+        "edit": "Edit",
+        "add": "Add",
+        "back": "Back",
+        "next": "Next",
+        "finish": "Finish",
+        "sign-in": "Sign in",
+        "sign-up": "Sign up",
+        "sign-out": "Sign out",
+        "google": "Sign in with Google"
+    },
+    "input": {
+        "password": {
+            "field": "Password",
+            "password-confirmation": "Password confirmation",
+            "password-six-characters": "Password must be at least 6 characters long",
+            "password-one-uppercase": "Password must have at least one uppercase letter",
+            "password-one-lowercase": "Password must have at least one lowercase letter",
+            "password-one-number": "Password must have at least one number",
+            "password-one-special-character": "Password must have at least one special character"
+        },
+        "email": {
+            "field": "E-mail",
+            "invalid": "Invalid E-mail",
+            "required": "E-mail is required"
+        },
+        "name": {
+            "first-name": "Name",
+            "last-name": "Last name",
+            "required": "Name is required",
+            "last-name-required": "Last name is required"
+        },
+        "passcode": {
+            "field": "Passcode",
+            "required": "Passcode is required"
+        }
+    },
+    "tooltip": {
+        "edit": "Edit",
+        "delete": "Delete",
+        "cancel": "Cancel"
+    }
+}

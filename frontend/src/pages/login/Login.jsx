@@ -1,8 +1,6 @@
-import "./Login.css";
 import React, { useState } from "react";
 import { Button } from 'primereact/button';
 import { Link, useNavigate } from 'react-router-dom';
-
 import Checkbox from '@mui/material/Checkbox';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import TextField from '@mui/material/TextField';
@@ -15,9 +13,11 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Divider from '@mui/material/Divider';
 import Chip from '@mui/material/Chip';
 import { ROUTES } from "../../routes";
+import style from './Login.module.css';
+import { useTranslation } from "react-i18next";
 
 const Login = () => {
-
+    const { t } = useTranslation();
     const [checked, setChecked] = React.useState();
     const navigate = useNavigate();
 
@@ -47,21 +47,19 @@ const Login = () => {
         <>
             <div className="text-center mb-5">
                 <img src="" alt="logo" height={50} className="mb-3" />
-                <div className="text-900 text-3xl font-medium mb-3">Entrar</div>
-                <span className="">para continuar com sua conta Leilão</span>
+                <div className="text-900 text-3xl font-medium mb-3">{t('login.title')}</div>
+                <span className="">{t('login.subtitle')}</span>
             </div>
             <div id="field-email" className="mb-3">
                 <FormControl fullWidth>
-                    <TextField onChange={handleChange} id="outlined-textarea" name="email" label="E-mail" placeholder="Endereço de e-mail" required />
+                    <TextField onChange={handleChange} id="outlined-textarea" name="email" label="E-mail" required />
                 </FormControl>
             </div>
-
             <div id="field-password" className="card flex justify-content-center mb-1">
                 <FormControl required fullWidth>
-                    <InputLabel htmlFor="outlined-adornment-password" >Senha</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password" >{t('login.password')}</InputLabel>
                     <OutlinedInput
                         id="outlined-adornment-password"
-                        placeholder="Senha deve ter no mínimo 6 caracteres"
                         type={showPassword ? 'text' : 'password'}
                         name="password"
                         onChange={handleChange}
@@ -77,38 +75,40 @@ const Login = () => {
                                 </IconButton>
                             </InputAdornment>
                         }
-                        label="Senha"
+                        label={t('login.password')}
                     />
                 </FormControl>
             </div>
-
             <div className="flex align-items-center justify-content-between mb-5">
                 <div className="flex align-items-center">
                     <Checkbox id="rememberme" onChange={e => setChecked(e.checked)} checked={checked} className="mr-1" />
-                    <label htmlFor="rememberme">Lembrar de min</label>
+                    <label htmlFor="rememberme">{t('login.remember-me')}</label>
                 </div>
                 <Link
                     className="font-medium ml-2 no-underline text-blue-500 text-right cursor-pointer"
-                    to="/recover-password">Esqueceu a senha?</Link>
+                    to="/recover-password">{t('login.forgot-password')}</Link>
             </div>
-
             <div className="mb-3">
                 <div className="col">
-                    <Button onClick={login} className="w-full btn-login" label="Continuar" icon="pi pi-user" iconPos="left" severity="secondary" outlined />
+                    <Button onClick={login}
+                        className={`w-full ${style.buttonLogin}`}
+                        label={t('button.sign-in')} icon="pi pi-user"
+                        iconPos="left" severity="secondary" outlined />
                 </div>
             </div>
-
             <Divider>
-                <Chip label="Ou" size="small" />
+                <Chip label={t('login.or')} size="small" />
             </Divider>
-
             <div className="text-center mt-3">
-                <span className="text-600 font-medium line-height-3">Não tem uma conta?
+                <span className="text-600 font-medium line-height-3">{t('login.no-account')}
                     <Link
                         className="font-medium ml-2 no-underline text-blue-500 text-right"
-                        to="/register">Cadastre-se</Link>
+                        to="/register">{t('login.register')}</Link>
                 </span>
-                <Button className="w-full p-button-raised p-button-warning mt-3" label="Entrar com Google" icon="pi pi-google" iconPos="left" />
+                <Button
+                    className={`w-full p-button-raised p-button-warning mt-3 ${style.buttonGoogle}`}
+                    label={t('button.google')}
+                    icon="pi pi-google" iconPos="left" />
             </div>
         </>
     );

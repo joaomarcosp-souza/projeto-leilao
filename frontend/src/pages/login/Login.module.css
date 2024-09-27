@@ -1,0 +1,13 @@
+.buttonLogin {
+    color: white;
+    background-color: #3160fa;
+}
+
+.buttonLogin:hover {
+    background-color: #134afc;
+}
+
+.buttonGoogle {
+    color: white;
+    background-color: #d34836;
+}

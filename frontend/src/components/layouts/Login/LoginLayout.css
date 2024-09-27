@@ -1,7 +1,7 @@
 #Card {
     margin: 10px;
     max-height: 50rem;
-    border-radius: 0.5rem !important; 
+    border-radius: 0.5rem !important;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1) !important;
 }
 
