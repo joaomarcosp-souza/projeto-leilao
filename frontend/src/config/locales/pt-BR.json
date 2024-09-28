@@ -6,8 +6,31 @@
         "total-sales": "Total de Vendas",
         "view-details": "Ver Detalhes"
     },
-    "label-img": {
-        "logo": "Imagem logo do leilão"
+    "label": {
+        "img": {
+            "logo": "Imagem do logo do leilão"
+        },
+        "aria": {
+            "email-camp": "Campo de e-mail",
+            "password-camp": "Campo de senha",
+            "pin-code-camp": "Campo de código PIN",
+            "password-visibility": "visibilidade do campo de senha",
+            "repeat-password-visibility": "visibilidade do campo de repetir senha",
+            "buttons": {
+                "send-email": "Botão para enviar e-mail",
+                "cancel": "Botão para cancelar",
+                "save": "Botão para salvar",
+                "delete": "Botão para deletar",
+                "edit": "Botão para editar",
+                "add": "Botão para adicionar",
+                "back": "Botão para voltar",
+                "next": "Botão para próximo",
+                "sign-in": "Botão para entrar",
+                "sign-up": "Botão para cadastrar",
+                "sign-out": "Botão para sair",
+                "google": "Botão para entrar com Google"
+            }
+        }
     },
     "login": {
         "title": "Logar",
@@ -25,6 +48,15 @@
         "title": "Registrar",
         "subtitle": "para acessar nossos módulos"
     },
+    "recover": {
+        "title": "Recuperar Senha",
+        "subtitle": "Um e-mail será enviado a você com instruções para recuperar sua senha"
+    },
+    "change-password": {
+        "title": "Alterar Senha",
+        "subtitle": "para voltar a acessar sua conta",
+        "inform-pin-code": "Informe o código PIN"
+    },
     "button": {
         "send-email": "Enviar e-mail",
         "cancel": "Cancelar",
@@ -38,16 +70,16 @@
         "sign-in": "Entrar",
         "sign-up": "Cadastrar",
         "sign-out": "Sair",
-        "google": "Entrar com Google"
+        "google": "Entrar com Google",
+        "language-config": "Configuração de idioma"
     },
     "input": {
         "password": {
             "field": "Senha",
-            "password-six-characters": "Senha deve ter pelo menos 6 caracteres",
-            "password-one-uppercase": "Senha deve ter pelo menos uma letra maiúscula",
-            "password-one-lowercase": "Senha deve ter pelo menos uma letra minúscula",
-            "password-one-number": "Senha deve ter pelo menos um número",
-            "password-one-special-character": "Senha deve ter pelo menos um caractere especial"
+            "required": "Senha é obrigatória",
+            "new-password": "Nova Senha",
+            "confirm-password": "Confirmar Senha",
+            "repeat-password": "Confirmar senha é obrigatória"
         },
         "email": {
             "field": "E-mail",
@@ -69,5 +101,14 @@
         "edit": "Editar",
         "delete": "Deletar",
         "cancel": "Cancelar"
+    },
+    "helper-text": {
+        "email": "Não é possível alterar o e-mail",
+        "repeat-password": "Por favor, repita a senha",
+        "password-six-characters": "Senha deve ter pelo menos 6 caracteres",
+        "password-one-uppercase": "Senha deve ter pelo menos uma letra maiúscula",
+        "password-one-lowercase": "Senha deve ter pelo menos uma letra minúscula",
+        "password-one-number": "Senha deve ter pelo menos um número",
+        "password-one-special-character": "Senha deve ter pelo menos um caractere especial"
     }
 }

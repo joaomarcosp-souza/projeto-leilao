@@ -9,8 +9,10 @@ import InputAdornment from '@mui/material/InputAdornment';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import { FormHelperText } from "@mui/material";
+import { useTranslation } from 'react-i18next';
 
 const Password = () => {
+    const { t } = useTranslation();
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [showRepeatPassword, setShowRepeatPassword] = useState(false);
@@ -66,10 +68,10 @@ const Password = () => {
             {/* Campo de Senha */}
             <div id="field-password" className="card flex justify-content-center mt-3">
                 <FormControl required fullWidth>
-                    <InputLabel htmlFor="outlined-adornment-password">Nova Senha</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-password">{t('input.password.new-password')}</InputLabel>
                     <OutlinedInput
                         id="outlined-adornment-password"
-                        placeholder="Informe uma senha forte."
+                        placeholder={t('input.password.required')}
                         type={showPassword ? 'text' : 'password'}
                         value={password}
                         onChange={handlePasswordChange}
@@ -78,7 +80,7 @@ const Password = () => {
                         endAdornment={
                             <InputAdornment position="end">
                                 <IconButton
-                                    aria-label="toggle password visibility"
+                                    aria-label={t('input.password-visibility"')}
                                     onClick={handleClickShowPassword}
                                     onMouseDown={handleMouseDownPassword}
                                     edge="end"
@@ -87,7 +89,7 @@ const Password = () => {
                                 </IconButton>
                             </InputAdornment>
                         }
-                        label="Nova Senha"
+                        label={t('input.password.new-password')}
                     />
                 </FormControl>
             </div>
@@ -95,36 +97,36 @@ const Password = () => {
             {isPasswordFocused && (
                 <div className="criteria-box">
                     <p style={getErrorStyle(validationErrors.length)}>
-                        A senha deve ter no mínimo 6 caracteres.
+                        {t('helper-text.password-six-characters')}
                     </p>
                     <p style={getErrorStyle(validationErrors.hasUpperCase)}>
-                        A senha deve conter pelo menos 1 letra maiúscula.
+                        {t('helper-text.password-one-uppercase')}
                     </p>
                     <p style={getErrorStyle(validationErrors.hasLowerCase)}>
-                        A senha deve conter pelo menos 1 letra minúscula.
+                        {t('helper-text.password-one-lowercase')}
                     </p>
                     <p style={getErrorStyle(validationErrors.hasNumber)}>
-                        A senha deve conter pelo menos 1 número.
+                        {t('helper-text.password-one-number')}
                     </p>
                     <p style={getErrorStyle(validationErrors.hasSpecialChar)}>
-                        A senha deve conter pelo menos 1 caractere especial.
+                        {t('helper-text.password-one-special-character')}
                     </p>
                 </div>
             )}
 
             <div id="field-repeat-password" className="mt-3">
                 <FormControl required fullWidth >
-                    <InputLabel htmlFor="outlined-adornment-repeat-password">Confirmar a Senha</InputLabel>
+                    <InputLabel htmlFor="outlined-adornment-repeat-password">{t('input.password.confirm-password')}</InputLabel>
                     <OutlinedInput
                         id="outlined-adornment-repeat-password"
-                        placeholder="Repita a senha"
+                        placeholder={t('input.password.repeat-password')}
                         type={showRepeatPassword ? 'text' : 'password'}
                         value={repeatPassword}
                         onChange={handleRepeatPasswordChange}
                         endAdornment={
                             <InputAdornment position="end">
                                 <IconButton
-                                    aria-label="visibilidade do campo de repetir senha"
+                                    aria-label={t('input.password.repeat-password-visibility')}
                                     onClick={handleClickShowRepeatPassword}
                                     onMouseDown={handleMouseDownPassword}
                                     edge="end"
@@ -133,10 +135,10 @@ const Password = () => {
                                 </IconButton>
                             </InputAdornment>
                         }
-                        label="Confirmar a Senha"
+                        label={t('input.password.confirm-password')}
                     />
                     {repeatPasswordError && <p className='repeatPasswordError'>{repeatPasswordError}</p>}
-                    <FormHelperText>{'Por favor, repita sua senha.'}</FormHelperText>
+                    <FormHelperText>{t('helper-text.repeat-password')}</FormHelperText>
                 </FormControl>
             </div>
         </div>

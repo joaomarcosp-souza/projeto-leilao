@@ -1,14 +1,14 @@
 import './LoginLayout.css';
 import React from "react";
 import { Card } from "primereact/card";
-import LanguageChange from '../../Inputs/buttons/language/LanguageChange';
+import LanguageSelectorButton from '../../Inputs/buttons/language/LanguageSelectorButton';
 
 const LoginLayout = ({ children }) => {
 
     return (
         <div>
             <div className="relative">
-                <LanguageChange />
+                <LanguageSelectorButton />
             </div>
             <div className="card_container">
                 <Card id="Card" className="lg:w-30rem sm:w-25rem">

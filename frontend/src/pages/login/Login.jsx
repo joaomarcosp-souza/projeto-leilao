@@ -46,7 +46,7 @@ const Login = () => {
     return (
         <>
             <div className="text-center mb-5">
-                <img src="" alt="logo" height={50} className="mb-3" />
+                <img src="" alt={t('label.img.logo')} height={50} className="mb-3" />
                 <div className="text-900 text-3xl font-medium mb-3">{t('login.title')}</div>
                 <span className="">{t('login.subtitle')}</span>
             </div>
@@ -91,7 +91,7 @@ const Login = () => {
             <div className="mb-3">
                 <div className="col">
                     <Button onClick={login}
-                        className={`w-full ${style.buttonLogin}`}
+                        className={`${style.buttonLogin}`}
                         label={t('button.sign-in')} icon="pi pi-user"
                         iconPos="left" severity="secondary" outlined />
                 </div>

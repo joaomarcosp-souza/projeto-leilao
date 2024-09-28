@@ -20,7 +20,7 @@ const Register = () => {
     return (
         <>
             <div className="text-center mb-5">
-                <img src="" alt={t('label-img.logo')} height={50} className="mb-3" />
+                <img src="" alt={t('label.img.logo')} height={50} className="mb-3" />
                 <div className="text-900 text-3xl font-medium mb-3">{t('register.title')}</div>
                 <span className="subTitle">{t('register.subtitle')}</span>
             </div>
@@ -41,7 +41,7 @@ const Register = () => {
 
             <div className="flex align-items-center justify-content-center mt-3">
                 <div className="mr-2">
-                    <Button className="w-full btn-login" icon="pi pi-envelope" iconPos="left" label={t('button.sign-up')} disabled={isButtonDisabled} />
+                    <Button className="buttonRegister" icon="pi pi-envelope" iconPos="left" label={t('button.sign-up')} disabled={isButtonDisabled} />
                 </div>
                 <CancelButton />
             </div>

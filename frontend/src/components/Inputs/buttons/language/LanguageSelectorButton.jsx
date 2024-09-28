@@ -1,13 +1,13 @@
-import './LanguageChange.css';
+import './LanguageSelectorButton.css';
 import React, { useState } from "react";
-import { IconButton, Menu, MenuItem } from '@mui/material';
+import { IconButton, Menu, MenuItem, Tooltip } from '@mui/material';
 import { FlagIcon } from "react-flag-kit";
 import { useTranslation } from "react-i18next";
 import i18n from '../../../../config/i18n';
 
 
 const LanguageChange = () => {
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
     const [anchorEl, setAnchorEl] = useState(null);
 
     const handleClick = (event) => {
@@ -30,11 +30,13 @@ const LanguageChange = () => {
 
     return (
         <div className="relative">
-            <IconButton aria-label="settings"
-                className='buttonConfig'
-                onClick={handleClick}>
-                <i className="pi pi-cog"></i>
-            </IconButton>
+            <Tooltip title={t('button.language-config')} arrow>
+                <IconButton aria-label="settings"
+                    className='buttonConfig'
+                    onClick={handleClick}>
+                    <i className="pi pi-cog"></i>
+                </IconButton>
+            </Tooltip>
             <Menu
                 anchorEl={anchorEl}
                 open={Boolean(anchorEl)}

@@ -1,0 +1,10 @@
+.buttonRecover {
+    color: white;
+    background-color: #3160fa;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.buttonRecover:hover {
+    background-color: #134afc;
+}

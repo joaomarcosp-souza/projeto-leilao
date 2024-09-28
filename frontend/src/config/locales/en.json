@@ -6,8 +6,31 @@
         "total-sales": "Total Sales",
         "view-details": "View Details"
     },
-    "label-img": {
-        "logo": "Image of the Auction logo"
+    "label": {
+        "img": {
+            "logo": "Auction logo image"
+        },
+        "aria": {
+            "email-camp": "E-mail field",
+            "password-camp": "Password field",
+            "pin-code-camp": "PIN code field",
+            "password-visibility": "visibility of the password field",
+            "repeat-password-visibility": "visibility of the repeat password field",
+            "buttons": {
+                "send-email": "Button to send e-mail",
+                "cancel": "Button to cancel",
+                "save": "Button to save",
+                "delete": "Button to delete",
+                "edit": "Button to edit",
+                "add": "Button to add",
+                "back": "Button to back",
+                "next": "Button to next",
+                "sign-in": "Button to sign in",
+                "sign-up": "Button to sign up",
+                "sign-out": "Button to sign out",
+                "google": "Button to sign in with Google"
+            }
+        }
     },
     "login": {
         "title": "Login",
@@ -25,6 +48,15 @@
         "title": "Register",
         "subtitle": "to access our modules"
     },
+    "recover": {
+        "title": "Recover Password",
+        "subtitle": "An e-mail will be sent to you with instructions to recover your password"
+    },
+    "change-password": {
+        "title": "Change Password",
+        "subtitle": "to access your account again",
+        "inform-pin-code": "Inform the PIN code"
+    },
     "button": {
         "send-email": "Send e-mail",
         "cancel": "Cancel",
@@ -38,17 +70,16 @@
         "sign-in": "Sign in",
         "sign-up": "Sign up",
         "sign-out": "Sign out",
+        "language-config": "Language configuration",
         "google": "Sign in with Google"
     },
     "input": {
         "password": {
             "field": "Password",
-            "password-confirmation": "Password confirmation",
-            "password-six-characters": "Password must be at least 6 characters long",
-            "password-one-uppercase": "Password must have at least one uppercase letter",
-            "password-one-lowercase": "Password must have at least one lowercase letter",
-            "password-one-number": "Password must have at least one number",
-            "password-one-special-character": "Password must have at least one special character"
+            "required": "Password is required",
+            "new-password": "New Password",
+            "confirm-password": "Confirm Password",
+            "repeat-password": "Confirm password is required"
         },
         "email": {
             "field": "E-mail",
@@ -70,5 +101,14 @@
         "edit": "Edit",
         "delete": "Delete",
         "cancel": "Cancel"
+    },
+    "helper-text": {
+        "email": "E-mail can't be edited",
+        "repeat-password": "Please repeat your password",
+        "password-six-characters": "Password must have at least six characters",
+        "password-one-uppercase": "Password must have at least one uppercase letter",
+        "password-one-lowercase": "Password must have at least one lowercase letter",
+        "password-one-number": "Password must have at least one number",
+        "password-one-special-character": "Password must have at least one special character"
     }
 }
