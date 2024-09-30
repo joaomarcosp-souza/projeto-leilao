@@ -55,7 +55,7 @@ const Login = () => {
                     <TextField onChange={handleChange} id="outlined-textarea" name="email" label="E-mail" required />
                 </FormControl>
             </div>
-            <div id="field-password" className="card flex justify-content-center mb-1">
+            <div id="field-password" className="mb-1">
                 <FormControl required fullWidth>
                     <InputLabel htmlFor="outlined-adornment-password" >{t('login.password')}</InputLabel>
                     <OutlinedInput

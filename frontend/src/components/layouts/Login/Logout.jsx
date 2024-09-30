@@ -1,7 +1,9 @@
 import React from "react";
 import { Button } from 'primereact/button';
+import { useTranslation } from "react-i18next";
 
 const Logout = () => {
+    const { t } = useTranslation();
 
     const handleLogout = () => {
         localStorage.clear();
@@ -11,7 +13,7 @@ const Logout = () => {
     return (
         <>
             <div className="col-2">
-                <Button onClick={handleLogout} label="Deslogar" icon="pi pi-user" iconPos="left" outlined />
+                <Button onClick={handleLogout} label={t('header.sign-out')} icon="pi pi-user" iconPos="left" outlined />
             </div>
         </>
     );

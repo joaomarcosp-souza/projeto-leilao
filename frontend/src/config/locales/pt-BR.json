@@ -1,10 +1,35 @@
 {
+    "header": {
+        "profile": "Perfil",
+        "sign-out": "Sair",
+        "change-password": "Alterar senha"
+    },
     "auction": {
-        "auctions-active": "Leilões Ativos",
-        "last-items-sold": "Últimos Itens Vendidos",
+        "active": "Leilões Ativos",
+        "last-sales": "Últimos Itens Vendidos",
         "new-users": "Novos Usuários",
         "total-sales": "Total de Vendas",
-        "view-details": "Ver Detalhes"
+        "month": {
+            "jan": "Jan",
+            "feb": "Fev",
+            "mar": "Mar",
+            "apr": "Abr",
+            "may": "Mai",
+            "jun": "Jun",
+            "jul": "Jul",
+            "aug": "Ago",
+            "sep": "Set",
+            "oct": "Out",
+            "nov": "Nov",
+            "dec": "Dez"
+        },
+        "text-card": {
+            "new-auction-today": "2 novos leilões",
+            "open-today": " abertos hoje",
+            "closed-today": " leiloados hoje",
+            "new-users-today": "novos usuários hoje",
+            "sales-today": "em vendas hoje"
+        }
     },
     "label": {
         "img": {
@@ -100,7 +125,8 @@
     "tooltip": {
         "edit": "Editar",
         "delete": "Deletar",
-        "cancel": "Cancelar"
+        "cancel": "Cancel",
+        "settings": "Settings"
     },
     "helper-text": {
         "email": "Não é possível alterar o e-mail",
@@ -110,5 +136,12 @@
         "password-one-lowercase": "Senha deve ter pelo menos uma letra minúscula",
         "password-one-number": "Senha deve ter pelo menos um número",
         "password-one-special-character": "Senha deve ter pelo menos um caractere especial"
+    },
+    "footer": {
+        "about": "Sobre",
+        "contact": "Contato",
+        "privacy": "Privacidade",
+        "terms": "Termos",
+        "all-rights": "Todos os direitos reservados"
     }
 }

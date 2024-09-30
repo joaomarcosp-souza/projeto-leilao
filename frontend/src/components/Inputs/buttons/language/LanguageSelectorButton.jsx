@@ -34,7 +34,7 @@ const LanguageChange = () => {
                 <IconButton aria-label="settings"
                     className='buttonConfig'
                     onClick={handleClick}>
-                    <i className="pi pi-cog"></i>
+                    <FlagIcon code={i18n.language === 'en' ? 'US' : 'BR'} size={24} />
                 </IconButton>
             </Tooltip>
             <Menu

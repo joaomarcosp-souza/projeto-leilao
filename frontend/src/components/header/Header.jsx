@@ -8,23 +8,23 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 import Logout from '../layouts/Login/Logout';
+import { useTranslation } from 'react-i18next';
+import LanguageChange from '../Inputs/buttons/language/LanguageSelectorButton';
 
-
-const pages = ['primeiro', 'Segundo', 'Terceiro'];
-
-const settings = [
-    { name: 'Profile', path: '/profile' },
-    { name: 'change password', path: '/change-password' },
-    { name: 'Logout', component: <Logout /> },
-];
 
 const Header = () => {
+    const { t } = useTranslation();
+
+    const settings = [
+        { name: t('header.profile'), path: '/profile' },
+        { name: t('header.change-password'), path: '/change-password' },
+        { name: t('header.sign-out'), component: <Logout /> },
+    ];
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -44,7 +44,8 @@ const Header = () => {
         setAnchorElUser(null);
     };
     return (
-        <AppBar position="static" sx={{ backgroundColor: '#282828' }}>
+        <AppBar position="static" sx={{ backgroundColor: '#282828', marginRight: '15px' }}>
+            <LanguageChange />
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, ml: 0 }} />
@@ -95,12 +96,10 @@ const Header = () => {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography className='menu-link' textAlign="center">{page}</Typography>
-                                </MenuItem>
-                            ))}
+
+
                         </Menu>
+                        <LanguageChange />
                     </Box>
                     <Typography
                         variant="h5"
@@ -124,23 +123,12 @@ const Header = () => {
                         flexGrow: 1,
                         display: { xs: 'none', md: 'flex' },
                         justifyContent: 'center',
-
                     }}>
-                        {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                {page}
-                            </Button>
-                        ))}
                     </Box>
 
-
                     <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title="Open settings">
-                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                        <Tooltip title={t('tooltip.settings')} arrow>
+                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, marginRight: '15px' }}>
                                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
                             </IconButton>
                         </Tooltip>
@@ -169,11 +157,12 @@ const Header = () => {
                                     )}
                                 </MenuItem>
                             ))}
+
                         </Menu>
                     </Box>
                 </Toolbar>
             </Container>
-        </AppBar>
+        </AppBar >
     );
 }
 export default Header;

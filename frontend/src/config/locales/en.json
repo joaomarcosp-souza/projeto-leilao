@@ -1,10 +1,35 @@
 {
+    "header": {
+        "profile": "Profile",
+        "sign-out": "Sign out",
+        "change-password": "Change password"
+    },
     "auction": {
-        "auctions-active": "Active Auctions",
-        "last-items-sold": "Last Items Sold",
+        "active": "Active Auctions",
+        "last-sales": "Last Items Sold",
         "new-users": "New Users",
         "total-sales": "Total Sales",
-        "view-details": "View Details"
+        "month": {
+            "jan": "Jan",
+            "feb": "Feb",
+            "mar": "Mar",
+            "apr": "Apr",
+            "may": "May",
+            "jun": "Jun",
+            "jul": "Jul",
+            "aug": "Aug",
+            "sep": "Sep",
+            "oct": "Oct",
+            "nov": "Nov",
+            "dec": "Dec"
+        },
+        "text-card": {
+            "new-auction-today": "2 new actions",
+            "open-today": " open today",
+            "closed-today": " auctioned today",
+            "new-users-today": "new users today",
+            "sales-today": "in sales today"
+        }
     },
     "label": {
         "img": {
@@ -100,7 +125,8 @@
     "tooltip": {
         "edit": "Edit",
         "delete": "Delete",
-        "cancel": "Cancel"
+        "cancel": "Cancel",
+        "settings": "Settings"
     },
     "helper-text": {
         "email": "E-mail can't be edited",
@@ -110,5 +136,12 @@
         "password-one-lowercase": "Password must have at least one lowercase letter",
         "password-one-number": "Password must have at least one number",
         "password-one-special-character": "Password must have at least one special character"
+    },
+    "footer": {
+        "about": "About",
+        "contact": "Contact",
+        "privacy": "Privacy",
+        "terms": "Terms",
+        "all-rights": "All rights reserved"
     }
 }
