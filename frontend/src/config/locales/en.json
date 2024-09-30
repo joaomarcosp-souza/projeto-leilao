@@ -1,0 +1,147 @@
+{
+    "header": {
+        "profile": "Profile",
+        "sign-out": "Sign out",
+        "change-password": "Change password"
+    },
+    "auction": {
+        "active": "Active Auctions",
+        "last-sales": "Last Items Sold",
+        "new-users": "New Users",
+        "total-sales": "Total Sales",
+        "month": {
+            "jan": "Jan",
+            "feb": "Feb",
+            "mar": "Mar",
+            "apr": "Apr",
+            "may": "May",
+            "jun": "Jun",
+            "jul": "Jul",
+            "aug": "Aug",
+            "sep": "Sep",
+            "oct": "Oct",
+            "nov": "Nov",
+            "dec": "Dec"
+        },
+        "text-card": {
+            "new-auction-today": "2 new actions",
+            "open-today": " open today",
+            "closed-today": " auctioned today",
+            "new-users-today": "new users today",
+            "sales-today": "in sales today"
+        }
+    },
+    "label": {
+        "img": {
+            "logo": "Auction logo image"
+        },
+        "aria": {
+            "email-camp": "E-mail field",
+            "password-camp": "Password field",
+            "pin-code-camp": "PIN code field",
+            "password-visibility": "visibility of the password field",
+            "repeat-password-visibility": "visibility of the repeat password field",
+            "buttons": {
+                "send-email": "Button to send e-mail",
+                "cancel": "Button to cancel",
+                "save": "Button to save",
+                "delete": "Button to delete",
+                "edit": "Button to edit",
+                "add": "Button to add",
+                "back": "Button to back",
+                "next": "Button to next",
+                "sign-in": "Button to sign in",
+                "sign-up": "Button to sign up",
+                "sign-out": "Button to sign out",
+                "google": "Button to sign in with Google"
+            }
+        }
+    },
+    "login": {
+        "title": "Login",
+        "subtitle": "to continue with your Auction account",
+        "email": "E-mail",
+        "password": "Password",
+        "remember-me": "Remember me",
+        "forgot-password": "Forgot password?",
+        "or": "Or",
+        "change-password": "Change password",
+        "no-account": "Don't have an account?",
+        "register": "Register"
+    },
+    "register": {
+        "title": "Register",
+        "subtitle": "to access our modules"
+    },
+    "recover": {
+        "title": "Recover Password",
+        "subtitle": "An e-mail will be sent to you with instructions to recover your password"
+    },
+    "change-password": {
+        "title": "Change Password",
+        "subtitle": "to access your account again",
+        "inform-pin-code": "Inform the PIN code"
+    },
+    "button": {
+        "send-email": "Send e-mail",
+        "cancel": "Cancel",
+        "save": "Save",
+        "delete": "Delete",
+        "edit": "Edit",
+        "add": "Add",
+        "back": "Back",
+        "next": "Next",
+        "finish": "Finish",
+        "sign-in": "Sign in",
+        "sign-up": "Sign up",
+        "sign-out": "Sign out",
+        "language-config": "Language configuration",
+        "google": "Sign in with Google"
+    },
+    "input": {
+        "password": {
+            "field": "Password",
+            "required": "Password is required",
+            "new-password": "New Password",
+            "confirm-password": "Confirm Password",
+            "repeat-password": "Confirm password is required"
+        },
+        "email": {
+            "field": "E-mail",
+            "invalid": "Invalid E-mail",
+            "required": "E-mail is required"
+        },
+        "name": {
+            "first-name": "Name",
+            "last-name": "Last name",
+            "required": "Name is required",
+            "last-name-required": "Last name is required"
+        },
+        "passcode": {
+            "field": "Passcode",
+            "required": "Passcode is required"
+        }
+    },
+    "tooltip": {
+        "edit": "Edit",
+        "delete": "Delete",
+        "cancel": "Cancel",
+        "settings": "Settings"
+    },
+    "helper-text": {
+        "email": "E-mail can't be edited",
+        "repeat-password": "Please repeat your password",
+        "password-six-characters": "Password must have at least six characters",
+        "password-one-uppercase": "Password must have at least one uppercase letter",
+        "password-one-lowercase": "Password must have at least one lowercase letter",
+        "password-one-number": "Password must have at least one number",
+        "password-one-special-character": "Password must have at least one special character"
+    },
+    "footer": {
+        "about": "About",
+        "contact": "Contact",
+        "privacy": "Privacy",
+        "terms": "Terms",
+        "all-rights": "All rights reserved"
+    }
+}

@@ -1,17 +1,23 @@
-import "./Home.css";
+import style from "./Home.module.css";
 import React from "react";
-import { Box } from "@mui/material";
+import CardInfo from "./HomeComponents/CardsInfo";
+import Graphics from "./HomeComponents/Graphics";
+
 
 
 const Home = () => {
 
     return (
         <>
-        <Box>
-            <div className="p-8">
+            <div className={style.CardInfos}>
+                <CardInfo />
             </div>
-        </Box>
+
+            <div className={style.Graphics}>
+                <Graphics />
+            </div>
         </>
     );
-}
+};
+
 export default Home;

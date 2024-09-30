@@ -1,0 +1,10 @@
+.buttonChange {
+    color: white;
+    background-color: #3160fa;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.buttonChange:hover {
+    background-color: #134afc;
+}

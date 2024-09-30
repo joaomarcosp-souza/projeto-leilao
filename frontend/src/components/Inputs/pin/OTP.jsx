@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Input as BaseInput } from '@mui/base/Input';
 import { Box, styled } from '@mui/system';
 import { Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 function OTP({ separator, length, value, onChange }) {
     const inputRefs = React.useRef(new Array(length).fill(null));
@@ -162,6 +163,8 @@ OTP.propTypes = {
 
 export default function OTPInput() {
     const [otp, setOtp] = React.useState('');
+    const { t } = useTranslation();
+
 
     return (
         <>
@@ -170,7 +173,7 @@ export default function OTPInput() {
                 fontSize: '1rem',
                 marginLeft: '0.3rem',
                 textAlign: 'center',
-            }} variant="body1" color="grey">Informe o código: </Typography>
+            }} variant="body1" color="grey">{t('change-password.inform-pin-code')} </Typography>
 
             <Box sx={{
                 ml: '0.3rem',

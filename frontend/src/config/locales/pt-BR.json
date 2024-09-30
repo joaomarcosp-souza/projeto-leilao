@@ -1,0 +1,147 @@
+{
+    "header": {
+        "profile": "Perfil",
+        "sign-out": "Sair",
+        "change-password": "Alterar senha"
+    },
+    "auction": {
+        "active": "Leilões Ativos",
+        "last-sales": "Últimos Itens Vendidos",
+        "new-users": "Novos Usuários",
+        "total-sales": "Total de Vendas",
+        "month": {
+            "jan": "Jan",
+            "feb": "Fev",
+            "mar": "Mar",
+            "apr": "Abr",
+            "may": "Mai",
+            "jun": "Jun",
+            "jul": "Jul",
+            "aug": "Ago",
+            "sep": "Set",
+            "oct": "Out",
+            "nov": "Nov",
+            "dec": "Dez"
+        },
+        "text-card": {
+            "new-auction-today": "2 novos leilões",
+            "open-today": " abertos hoje",
+            "closed-today": " leiloados hoje",
+            "new-users-today": "novos usuários hoje",
+            "sales-today": "em vendas hoje"
+        }
+    },
+    "label": {
+        "img": {
+            "logo": "Imagem do logo do leilão"
+        },
+        "aria": {
+            "email-camp": "Campo de e-mail",
+            "password-camp": "Campo de senha",
+            "pin-code-camp": "Campo de código PIN",
+            "password-visibility": "visibilidade do campo de senha",
+            "repeat-password-visibility": "visibilidade do campo de repetir senha",
+            "buttons": {
+                "send-email": "Botão para enviar e-mail",
+                "cancel": "Botão para cancelar",
+                "save": "Botão para salvar",
+                "delete": "Botão para deletar",
+                "edit": "Botão para editar",
+                "add": "Botão para adicionar",
+                "back": "Botão para voltar",
+                "next": "Botão para próximo",
+                "sign-in": "Botão para entrar",
+                "sign-up": "Botão para cadastrar",
+                "sign-out": "Botão para sair",
+                "google": "Botão para entrar com Google"
+            }
+        }
+    },
+    "login": {
+        "title": "Logar",
+        "subtitle": "para continuar com sua conta de leilão",
+        "email": "E-mail",
+        "password": "Senha",
+        "remember-me": "Lembrar-me",
+        "forgot-password": "Esqueceu a senha?",
+        "or": "Ou",
+        "change-password": "Alterar senha",
+        "no-account": "Não tem uma conta?",
+        "register": "Cadastre-se"
+    },
+    "register": {
+        "title": "Registrar",
+        "subtitle": "para acessar nossos módulos"
+    },
+    "recover": {
+        "title": "Recuperar Senha",
+        "subtitle": "Um e-mail será enviado a você com instruções para recuperar sua senha"
+    },
+    "change-password": {
+        "title": "Alterar Senha",
+        "subtitle": "para voltar a acessar sua conta",
+        "inform-pin-code": "Informe o código PIN"
+    },
+    "button": {
+        "send-email": "Enviar e-mail",
+        "cancel": "Cancelar",
+        "save": "Salvar",
+        "delete": "Deletar",
+        "edit": "Editar",
+        "add": "Adicionar",
+        "back": "Voltar",
+        "next": "Proximo",
+        "finish": "Finalizar",
+        "sign-in": "Entrar",
+        "sign-up": "Cadastrar",
+        "sign-out": "Sair",
+        "google": "Entrar com Google",
+        "language-config": "Configuração de idioma"
+    },
+    "input": {
+        "password": {
+            "field": "Senha",
+            "required": "Senha é obrigatória",
+            "new-password": "Nova Senha",
+            "confirm-password": "Confirmar Senha",
+            "repeat-password": "Confirmar senha é obrigatória"
+        },
+        "email": {
+            "field": "E-mail",
+            "invalid": "Invalid E-mail",
+            "required": "E-mail é obrigatório"
+        },
+        "name": {
+            "first-name": "Nome",
+            "last-name": "Sobrenome",
+            "required": "Nome é obrigatório",
+            "last-name-required": "Sobrenome é obrigatório"
+        },
+        "passcode": {
+            "field": "Passcode",
+            "required": "Passcode é obrigatório"
+        }
+    },
+    "tooltip": {
+        "edit": "Editar",
+        "delete": "Deletar",
+        "cancel": "Cancel",
+        "settings": "Settings"
+    },
+    "helper-text": {
+        "email": "Não é possível alterar o e-mail",
+        "repeat-password": "Por favor, repita a senha",
+        "password-six-characters": "Senha deve ter pelo menos 6 caracteres",
+        "password-one-uppercase": "Senha deve ter pelo menos uma letra maiúscula",
+        "password-one-lowercase": "Senha deve ter pelo menos uma letra minúscula",
+        "password-one-number": "Senha deve ter pelo menos um número",
+        "password-one-special-character": "Senha deve ter pelo menos um caractere especial"
+    },
+    "footer": {
+        "about": "Sobre",
+        "contact": "Contato",
+        "privacy": "Privacidade",
+        "terms": "Termos",
+        "all-rights": "Todos os direitos reservados"
+    }
+}

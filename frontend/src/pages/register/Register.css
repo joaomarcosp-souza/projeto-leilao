@@ -1,0 +1,10 @@
+.buttonRegister {
+    color: white;
+    background-color: #3160fa;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.buttonRegister:hover {
+    background-color: #134afc;
+}

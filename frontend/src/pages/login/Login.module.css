@@ -1,0 +1,23 @@
+.buttonLogin {
+    color: white;
+    background-color: #3160fa;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.buttonLogin:hover {
+    background-color: #134afc;
+}
+
+.buttonGoogle {
+    color: white;
+    background-color: #e23c44;
+    border-radius: 5px;
+    border: transparent;
+    box-shadow: 1px 1px 1px #5865;
+    white-space: nowrap;
+}
+
+.buttonGoogle:hover {
+    background-color: #F01818;
+}
