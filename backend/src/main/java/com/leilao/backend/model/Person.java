@@ -3,6 +3,8 @@ package com.leilao.backend.model;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -25,7 +27,9 @@ public class Person {
     private Long id;
     private String name;
     private String email;
+    @JsonIgnore
     private String password;
+    @JsonIgnore
     @Column(name = "validation_code")
     private String validationCode;
     private LocalDateTime validationCodeValidity;
