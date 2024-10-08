@@ -15,9 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.leilao.backend.model.Profile;
 import com.leilao.backend.service.ProfileService;
 
+import jakarta.websocket.server.PathParam;
+
 @RestController
-@RequestMapping("api/profile")
+@RequestMapping("/api/profile")
 public class ProfileController {
+
     @Autowired
     private ProfileService profileService;
 
@@ -27,8 +30,13 @@ public class ProfileController {
     }
 
     @PutMapping
-    public Profile edit(@RequestBody Profile profile) {
+    public Profile update(@RequestBody Profile profile) {
         return profileService.create(profile);
+    }
+
+    @GetMapping
+    public List<Profile> listAll() {
+        return profileService.listAll();
     }
 
     // localhost:8080/api/profile/10
@@ -37,8 +45,11 @@ public class ProfileController {
         profileService.delete(id);
     }
 
-    @GetMapping
-    public List<Profile> listAll() {
-        return profileService.listAll();
+    // localhost:8080/api/profile?name=jose&age=2
+    @GetMapping("/find")
+    public String find(@PathParam("name") String name,
+            @PathParam("age") Integer age) {
+        System.out.println(name + " " + age);
+        return name + " " + age;
     }
 }

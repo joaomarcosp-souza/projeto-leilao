@@ -1,7 +1,5 @@
 package com.leilao.backend.model;
 
-import org.hibernate.annotations.ManyToAny;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
@@ -17,6 +15,7 @@ import lombok.Data;
 @Table(name = "person_profile")
 @Data
 public class PersonProfile {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,7 +24,7 @@ public class PersonProfile {
     @JoinColumn(name = "profile_id")
     private Profile profile;
 
-    @ManyToAny
+    @ManyToOne
     @JoinColumn(name = "person_id")
     @JsonIgnore
     private Person person;
